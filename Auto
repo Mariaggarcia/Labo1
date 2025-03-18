@@ -1,0 +1,26 @@
+class Auto {
+    private String marca;
+    private String modelo;
+    private Motor motor;
+    private CajaDeVelocidades caja;
+    private Rueda[] ruedas;
+    private int cantidadPuertas;
+    private boolean aireAcondicionado;
+
+    public Auto(String marca, String modelo, Motor motor, CajaDeVelocidades caja, Rueda[] ruedas, int cantidadPuertas, boolean aireAcondicionado) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+        this.caja = caja;
+        this.ruedas = ruedas;
+        this.cantidadPuertas = cantidadPuertas;
+        this.aireAcondicionado = aireAcondicionado;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Auto - Marca: " + marca + ", Modelo: " + modelo);
+        motor.mostrarInfo();
+        caja.mostrarInfo();
+        System.out.println("Cantidad de puertas: " + cantidadPuertas + ", Aire acondicionado: " + (aireAcondicionado ? "Sí" : "No"));
+    }
+}
