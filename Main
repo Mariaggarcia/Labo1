@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        // Crear objetos y probar funcionalidad
+        Rueda r1 = new Rueda(16, "Negro", "Aleación");
+        Rueda r2 = new Rueda(16, "Negro", "Acero");
+        r1.girar();
+        r2.mostrarInfo();
+
+        CajaDeVelocidades caja = new CajaDeVelocidades("ZF", 6, "Larga");
+        caja.cambiarMarcha(3);
+        caja.mostrarInfo();
+
+        Motor motor = new Motor("Honda", 150, 2.0);
+        motor.arrancar();
+        motor.mostrarInfo();
+
+        Rueda[] ruedas = {r1, r1, r2, r2};
+        Auto auto = new Auto("Toyota", "Corolla", motor, caja, ruedas, 4, true);
+        auto.mostrarInfo();
+    }
+}
