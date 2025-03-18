@@ -1,0 +1,27 @@
+class Motor {
+    private String marca;
+    private int hp;
+    private double cilindrada;
+    private boolean encendido;
+
+    public Motor(String marca, int hp, double cilindrada) {
+        this.marca = marca;
+        this.hp = hp;
+        this.cilindrada = cilindrada;
+        this.encendido = false;
+    }
+
+    public void arrancar() {
+        encendido = true;
+        System.out.println("Motor encendido");
+    }
+
+    public void detener() {
+        encendido = false;
+        System.out.println("Motor apagado");
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Motor - Marca: " + marca + ", Cilindrada: " + cilindrada);
+    }
+}
