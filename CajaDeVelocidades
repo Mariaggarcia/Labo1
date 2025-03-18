@@ -1,0 +1,26 @@
+class CajaDeVelocidades {
+    private String fabricante;
+    private int cantidadMarchas;
+    private String tipoRelacion;
+    private int marchaActual;
+
+    public CajaDeVelocidades(String fabricante, int cantidadMarchas, String tipoRelacion) {
+        this.fabricante = fabricante;
+        this.cantidadMarchas = cantidadMarchas;
+        this.tipoRelacion = tipoRelacion;
+        this.marchaActual = 0;
+    }
+
+    public void cambiarMarcha(int nuevaMarcha) {
+        if (nuevaMarcha >= 0 && nuevaMarcha <= cantidadMarchas) {
+            marchaActual = nuevaMarcha;
+            System.out.println("Marcha cambiada a: " + marchaActual);
+        } else {
+            System.out.println("Marcha inválida");
+        }
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Caja - Fabricante: " + fabricante + ", Marcha actual: " + marchaActual);
+    }
+}
