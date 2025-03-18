@@ -1,0 +1,19 @@
+class Rueda {
+    private double radio;
+    private String color;
+    private String material;
+
+    public Rueda(double radio, String color, String material) {
+        this.radio = radio;
+        this.color = color;
+        this.material = material;
+    }
+
+    public void girar() {
+        System.out.println("La rueda de material " + material + " está girando.");
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Rueda - Radio: " + radio + ", Color: " + color);
+    }
+}
